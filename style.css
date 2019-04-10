@@ -1,0 +1,10 @@
+p {
+  background-color: lightblue;
+  color:white;
+  padding:20px;
+}
+
+#messagebox{
+  width:200px;
+  height:100px;
+}
