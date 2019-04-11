@@ -10,21 +10,25 @@
 </head>
 <body>
   <h1> Messages </h1>
-
-  <div>
-    <ul> 
+<!-- ....................Sidebar with Channels ................... -->
+  <div id="channelSidebar">
+    <ul class="channelList">
+      <li id="c1"> <a href=""> Channel 1 </a> </li>
+      <li id="c2"> Channel 2</li>
+      <li id="c3"> Channel 3</li>
     </ul>
   </div>
+<!-- ....................Message Display ................... -->
+<div id="messageBody">
+  <input type="text" placeholder="Type a message" id="messagebox"> </input>
+  <p class="mdisplay"></p>
 
-<input type="text" placeholder="Type a message" id="messagebox"> </input>
-<p class="mdisplay"></p>
+  <button class="delMessage">X</button>
+  <button class="like">Like</button>
+  <span class="score">0</span>
 
-<button class="delMessage">X</button>
-<button class="like">Like</button>
-<span class="score">0</span>
-
-<script src="jquery-3.3.1.min.js"> </script>
-<script src="script.js"> </script>
-
+  <script src="jquery-3.3.1.min.js"> </script>
+  <script src="script.js"> </script>
+</div>
 </body>
 </html>

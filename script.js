@@ -30,3 +30,10 @@ $('.like').on('click', function() {
 	score ++ // update
 	$(this).next('.score').html(score) // set
 })
+
+//------------------channel -----------------------
+// $('#c1').on('click', function() {
+//   $('body').css({ // multiple styles
+// 	background-color: 'blue', // fontSize
+// });
+// };

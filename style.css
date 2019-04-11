@@ -4,6 +4,28 @@ p {
   padding:20px;
 }
 
+a{
+  color:white;
+  text-decoration: none; 
+}
+/* channelSidebar doesnt work yet... */
+div #channelSidebar{
+  background-color: green;
+  padding: 20px
+}
+
+.channelList{
+  background-color:#4B0082 ;
+  color:white;
+  padding:20px;
+  /* position:absolute; */
+}
+
+div #messageBody{
+ /* position:relative; */
+}
+
+
 #messagebox{
   width:200px;
   height:100px;
