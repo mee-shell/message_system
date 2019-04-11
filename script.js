@@ -1,39 +1,40 @@
-// message box: input and display underneath in p tag
+// --------------message box: input and display underneath in p tag----------------
 
 $('#messagebox').on('keyup', function(e) {
   if (e.which == 13) {
     //fade in: hiding it first, so it doesnt append right away, then fades in
-    // problem: makes everything fade in, how can i nest messagebox in there ?
-		$('.mdisplay').append( '<p>' +$('#messagebox').val()+'</p>'+'<button class="delMessage">'+
-    'X'+'</button>'+'<button class="like">'+'Like'+'</button>'+'<span class="score">'+0+'</span>').hide().fadeIn(1000);
+    let newelement = $('<div class="hidden"><p class="newM">' +$('#messagebox').val()+'</p>'+'<button class="delMessage">'+
+    'X'+'</button>'+'<button class="like">'+'Like'+'</button>'+'<span class="score">'+0+'</span></div>');
+		$('.mdisplay').append(newelement);
+    newelement.fadeIn(1000);
 		$('#messagebox').val('');
 }
 });
 
-// delete a message with a click on the message or on the delete button
-// $('.mdisplay').on('click', function() {
-// 	$('.mdisplay').fadeOut();
-// });
-// $('.mdisplay').on('click', function() {
-// 	let deleteM= $(this).next('p').hide();
-// });
 
-
-// delete with delete button : add button with p and then function is button gets pushed
-$('.delMessage').on('click', function() {
-	$('.mdisplay').fadeOut();
+//using event listener to target the buttons as they didn't exist before:   $(document).on(click...--------------------
+// ---------------------deleting a comment by clicking button----------------------------
+ $(document).on('click', function(){
+   $('.delMessage').on('click', function(e) {
+	  $(this.newM).hide();
+  });
 });
 
-// Like
+// -----------Like button-----------------------------
+$(document).on('click', function(){
 $('.like').on('click', function() {
-	let score =  $(this).next('.score').html() // get
+  let score= $(this).next('.score').html() // get
 	score ++ // update
 	$(this).next('.score').html(score) // set
 })
+});
 
 //------------------channel -----------------------
 // $('#c1').on('click', function() {
 //   $('body').css({ // multiple styles
-// 	background-color: 'blue', // fontSize
+// 	background-color: 'blue',
 // });
 // };
+
+// dynamic: array and then push a new one
+var channel =['channel1','channel2','channel3'];

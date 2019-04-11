@@ -6,7 +6,7 @@ p {
 
 a{
   color:white;
-  text-decoration: none; 
+  text-decoration: none;
 }
 /* channelSidebar doesnt work yet... */
 div #channelSidebar{
@@ -29,4 +29,8 @@ div #messageBody{
 #messagebox{
   width:200px;
   height:100px;
+}
+
+.hidden{
+  display:none; 
 }
